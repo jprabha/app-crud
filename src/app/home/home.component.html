@@ -1,0 +1,26 @@
+<p>
+  home works!
+</p>
+<!--<ul *ngIf = "dataFetched">
+  <li *ngFor="let item of dataFetched.documents">{{item.fields.description.stringValue}}</li>
+</ul>-->
+<div *ngIf = "dataFetched">
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="2">Buttons</th>
+    </tr>
+    <tr *ngFor="let item of dataFetched.documents">
+      <td>{{item.fields.title.stringValue}}</td>
+      <td>{{item.fields.description.stringValue}}</td>
+      <td>Update</td>
+      <td (click)=deleteData(item.name)>Delete</td>
+    </tr>
+  </table>
+  
+  <div>
+    <button class="button" routerLink="/addData">Add a new row</button>
+  </div>
+
+</div>

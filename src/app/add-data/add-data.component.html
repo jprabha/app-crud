@@ -1,0 +1,14 @@
+<h2>Add Data</h2>
+<div>
+  <label>Title: </label>
+  <input type="text" id="title" [(ngModel)] = "titleInput" required/>
+</div>
+
+<div>
+  <label>Description: </label>
+  <input type="text" id="desc" [(ngModel)] = "descInput" required/>
+</div>
+
+<button (click)="addData()" [disabled]="!titleInput || !descInput">Add</button>
+<button (click)="goBack()">Go Back</button>
+<div>{{message}}</div>
